@@ -1,0 +1,26 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 70px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+bg-main {
+    background-color: #f5f5f5;
+}
+
+nav {
+    font-family: 'Open sans', sans-serif;
+}
