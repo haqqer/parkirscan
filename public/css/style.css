@@ -24,3 +24,11 @@ bg-main {
 nav {
     font-family: 'Open sans', sans-serif;
 }
+
+.form-handler {
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    font-family: 'Open sans', sans-serif;
+}

@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('mahasiswa','MahasiswaController');
+Route::get('/login', 'UsersController@login');
 
 
