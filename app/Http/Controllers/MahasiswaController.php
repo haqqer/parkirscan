@@ -30,7 +30,7 @@ class MahasiswaController extends Controller
         
         $mahasiswa = new Mahasiswa();     
         $mahasiswa->nim = $request['fakultas'] . "." . $request['tahun'] . "." . $request['nim'];
-        $mahasiswa->nama = $request['nama'];
+        $mahasiswa->nama = $request['nama_depan']. " " . $request['nama_belakang'];
         $mahasiswa->plat = $request['depan'] . " " . $request['tengah'] . " " . $request['belakang'];
         //FILE UPLOAD Handler
         $file = $request->file('foto');
