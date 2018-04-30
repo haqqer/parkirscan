@@ -19,6 +19,8 @@ class CreateTableMahasiswa extends Migration
             $table->string('nama', 40);
             $table->string('foto')->nullable();
             $table->string('plat', 15);
+            $table->string('email', 250);
+            $table->string('nohp', 15);
             $table->timestamps();
         });
     }

@@ -20,3 +20,4 @@ use Illuminate\Http\Request;
 Route::get('mahasiswa', 'MahasiswaApiController@mahasiswa');
 // Route::get('mahasiswa/{$mahasiswa->nim}', 'MahasiswaApiController@show','$nim');
 Route::get('mahasiswa/{nim}', 'MahasiswaApiController@show', 'nim');
+Route::get('cek_show', 'MahasiswaApiController@cek_show');

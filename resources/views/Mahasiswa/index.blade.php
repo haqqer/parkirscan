@@ -14,15 +14,15 @@
     <tbody>
       
       @foreach($mahasiswa_list as $mahasiswa)
+      
       <tr>
         <td>{{ $index++ }}</td>
         <td>{{$mahasiswa['nim']}}</td>
         <td>{{$mahasiswa['nama']}}</td>
         <td>{{$mahasiswa['plat']}}</td>
-
         <td>
           <a href="{{ action('MahasiswaController@edit', $mahasiswa['id']) }}" class="btn btn-primary">Edit</a>
-          
+          <a href="{{ action('MahasiswaController@show', $mahasiswa['id']) }}">Detail</a>    
         </td>
         <td>
           <form action="{{action('MahasiswaController@destroy', $mahasiswa['id'])}}" method="post">
@@ -35,15 +35,20 @@
       @endforeach
     </tbody>
   </table>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
     Tambah Mahasiswa
-  </button>
+  </button> -->
+  <a href="{{ action('MahasiswaController@create') }}">
+    <button type="button" class="btn btn-primary">
+      Tambah Mahasiswa
+    </button>
+  </a>
 
   <!-- CONTENT MODAL -->
-  <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-      <!--- >>> MAIN CONTENT FORM <<< -->
+
       <div class="form-handler">
       <div class="text-center mb-5">
         <h2>Biodata Mahasiswa</h2>
@@ -128,9 +133,9 @@
          </div>
       </form>
       </div> 
-    <!--- >>> END MAIN CONTENT FORM <<< -->
+
 
       </div>
     </div>
-  </div>
+  </div> -->
 @stop

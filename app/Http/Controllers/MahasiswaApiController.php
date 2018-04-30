@@ -10,12 +10,13 @@ class MahasiswaApiController extends Controller
     public function mahasiswa(Request $request, Mahasiswa $mahasiswa)
     {
         $mahasiswa = $mahasiswa->all();
-        return response()->json($mahasiswa);
+        return response()->json(['items' => $mahasiswa]);
     }
 
     public function show(Request $request, Mahasiswa $mahasiswa, $nim)
     {
         $mahasiswa = $mahasiswa->where('nim', $nim)->get();
-        return response()->json($mahasiswa);
+        return response()->json(['items' => $mahasiswa]);
     }
+    
 }

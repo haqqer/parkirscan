@@ -12,5 +12,7 @@ class Mahasiswa extends Model
         'nama',
         'foto',
         'plat',
+        'email',
+        'nohp',
     ];
 }
