@@ -37,7 +37,7 @@ class MahasiswaController extends Controller
         $mahasiswa->email = $request['email'];
         $mahasiswa->nohp = $request['nohp'];
         $mahasiswa->save();
-        return redirect()->route('mahasiswa.index');
+        return redirect()->route('mahasiswa');
     }
 
     public function show($id)

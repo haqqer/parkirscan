@@ -10,16 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use QR_Code\QR_Code;
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('mahasiswa','MahasiswaController');
-Route::get('/login', 'UsersController@login');
-Route::get('/qrcode', function () {
-    $qr = new QR_Code;
-    return view('cek', compact('qr'));
-
-});
-
+Route::resource('mahasiswa','MahasiswaController')->middleware('auth');
+Auth::routes();
+Route::get('/mahasiswa', 'MahasiswaController@index')->name('home')->middleware('auth');

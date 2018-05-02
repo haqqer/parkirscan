@@ -1,6 +1,7 @@
-@extends('template')
+@extends('layouts.app')
 
-@section('main')
+@section('content')
+<div class="container">
 <div class="text-center mb-5">
   <h2>Biodata Mahasiswa</h2>
 </div>
@@ -72,21 +73,15 @@
               <input type="text" class="form-control" name="belakang" placeholder="ZZ" size="2" maxlength="2">
             </div>
           </div>
-
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4">
-            <label for="Gambar">Upload Foto Profil</label>
-            <input type="file" name="foto">    
-         </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="form-group col-md-4" style="margin-top:60px">
+          
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4" style="margin-top:60px">
             <button type="submit" class="btn btn-success">Submit</button>
           </div>
         </div>
       </form>
+    </div>
     </div>
     <script>
       $(document).ready(

@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layouts.app')
 
-@section('main')
-
+@section('content')
+<div class="container">
     <div class="row">
         <div class="col">
             <div class="float-left">
@@ -50,4 +50,5 @@
             <a href="data:image/png;base64, {!! base64_encode($qrcode) !!}" download>Download</a>
         </div>
     </div>
+</div>
 @endsection
