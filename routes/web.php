@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Route::resource('mahasiswa','MahasiswaController')->middleware('auth');

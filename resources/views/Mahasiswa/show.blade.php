@@ -13,6 +13,11 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
     <div class="row m-5">
         <div class="col-md-4">
             <img width="200px" height="auto" src="{{  $mahasiswa->foto }}" alt="">
@@ -47,8 +52,17 @@
         <div class="col-md-4">
             <strong>QrCode:</strong>
             <img src="data:image/png;base64, {!! base64_encode($qrcode) !!}" alt=""><br>
-            <a href="data:image/png;base64, {!! base64_encode($qrcode) !!}" download>Download</a>
+            
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center">
+            <a class="btn btn-primary">Download QR</a>    
+            <a href="data:image/png;base64, {!! base64_encode($qrcode) !!}" download class="btn btn-primary">Download QR</a>
+            </div>
+        </div>
+    </div>
+    <hr>
 </div>
 @endsection
