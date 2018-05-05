@@ -23,7 +23,7 @@
             <img width="200px" height="auto" src="{{  $mahasiswa->foto }}" alt="">
         </div>
         <div class="col-md-4">
-            <table>
+            <table class="table">
                 <tbody>
                     <tr>
                         <th>NIM</th>
@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="text-center">
-            <a class="btn btn-primary">Download QR</a>    
+            <a href="{{ action('MahasiswaController@edit', $mahasiswa['id']) }}" class="btn btn-primary">Edit</a>  
             <a href="data:image/png;base64, {!! base64_encode($qrcode) !!}" download class="btn btn-primary">Download QR</a>
             </div>
         </div>

@@ -36,3 +36,9 @@ nav {
 .box-content {
     border-right: 1px solid lightgray;
 }
+
+.main-form {
+    background-color: #f5f5f5;
+    border: 2px solid lightgray;
+    border-radius: 25%;
+}

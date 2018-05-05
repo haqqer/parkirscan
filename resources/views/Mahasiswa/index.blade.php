@@ -24,14 +24,15 @@
           <td>{{$mahasiswa['nama']}}</td>
           <td>{{$mahasiswa['plat']}}</td>
           <td>
-            <a href="{{ action('MahasiswaController@edit', $mahasiswa['id']) }}" class="btn btn-primary">Edit</a>
+            
             <a href="{{ action('MahasiswaController@show', $mahasiswa['id']) }}" class="btn btn-success">Detail</a>    
           </td>
           <td>
             <form action="{{action('MahasiswaController@destroy', $mahasiswa['id'])}}" method="post">
               @csrf
               <input name="_method" type="hidden" value="DELETE">
-              <button class="btn btn-danger" type="submit">Delete</button>
+              <a href="{{ action('MahasiswaController@edit', $mahasiswa['id']) }}" class="btn btn-primary">Edit</a>
+              <button class="btn btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
             </form>
           </td>
         </tr></a>
@@ -41,11 +42,6 @@
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
       Tambah Mahasiswa
     </button> -->
-    <a href="{{ action('MahasiswaController@create') }}">
-      <button type="button" class="btn btn-primary">
-        Tambah Mahasiswa
-      </button>
-    </a>
   </div>
   <script>
     

@@ -101,8 +101,37 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'fakultas' => [
+            'required' => 'NIM wajib diisi',
+        ],
+        'tahun' => [
+            'required' => 'NIM wajib diisi dengan valid',
+            'numeric' => 'Tahun harus berupa angka',
+        ],
+        'nim' => [
+            'required' => 'NIM wajib diisi dengan valid',
+            'numeric' => 'NIM harus berupa angka',
+        ],
+        'nama' => [
+            'required' => 'nama wajib diisi',
+            'string' => 'Nama harus valid',
+        ],
+        'email' => [
+            'required' => 'email wajib diisi',
+        ],
+        'nohp' => [
+            'required' => 'No HP wajib diisi',
+            'numeric' => 'No HP harus berupa angka',
+        ],
+        'depan' => [
+            'required' => 'No plat harus sesuai dengan STNK',
+        ],
+        'tengah' => [
+            'required' => 'No plat harus sesuai dengan STNK',
+            'numeric' => 'No plat tengah harus berupa angka',
+        ],
+        'belakang' => [
+            'required' => 'No plat harus sesuai dengan STNK',
         ],
     ],
 
